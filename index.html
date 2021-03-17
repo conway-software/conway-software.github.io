@@ -14,7 +14,7 @@
 		a:visited {color:#c9f}
 	}
 	body{
-		margin:1em auto;
+		margin: auto;
 		max-width:40em;
 		padding:0 .62em;
 		font:1.2em/1.62 'Raleway', sans-serif;
@@ -24,10 +24,12 @@
 		font-family: 'Raleway', sans-serif;
 	}
 	h1.title{
+		margin: 0 0;
 		line-height:2;
+		text-align: center;
 		font-family: 'Raleway', sans-serif;
 		font-size: 8vh;
-		padding-top: 12vh;
+		padding-top: 10vh;
 		color: #544;
 	}
 	@media print{
@@ -35,9 +37,32 @@
 			max-width:none
 		}
 	}
+	.button {
+		background-color: #008CBA;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		font-family: 'Raleway', sans-serif;
+	}
 </style>
 
 <article>
 	<header>
-		<h1 class='title'>conway.software<h1>
-</article>
+		<h1 class='title'>conway.software</h1>
+	</header>
+	<body>
+		<div style="display: block; margin-left: auto; margin-right: auto;">
+			<button style="display: block; margin-left: auto; margin-right: auto;" class="button" id="playbutton" onclick="playButtonClicked();">Click me</button>
+		</div>
+		<div>
+			<canvas style="display: block; margin-left: auto; margin-right: auto;" width='300' height='600'></canvas>
+		</div>
+	</body>
+		<script src='js/tetris.js'></script>
+		<script src='js/controller.js'></script>
+		<script src='js/render.js'></script>
+	</article>
